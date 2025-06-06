@@ -406,50 +406,79 @@ nav ul li a.active {
     font-weight: 700;
 }
 
-/* Item Detail Page */
+/* Item Detail Section */
 .item-detail {
-    padding: 100px 20px 60px;
-    background-color: #fdfdfc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background: url('./assets/coffee-bg.avif') no-repeat center center/cover;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    color: white;
+    overflow: hidden;
 }
 
+.item-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(62, 39, 35, 0.85); /* dark overlay for consistency */
+    z-index: 0;
+}
+
+.item-detail .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Card-Like Layout */
 .item-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    background: rgba(249, 245, 240, 0.95);
+    border-radius: 15px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    align-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    color: var(--text);
 }
 
+/* Image Section */
 .item-image {
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    transition: transform 0.3s ease;
+    box-shadow: var(--shadow);
+    max-height: 400px;
 }
 
 .item-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.3s ease;
+    border-radius: 15px;
 }
 
 .item-image:hover img {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
+/* Text Content */
 .item-info {
     text-align: center;
     max-width: 700px;
+    margin: 0 auto;
 }
 
 .item-info h1 {
     font-size: 2.5rem;
-    color: var(--dark);
     margin-bottom: 10px;
+    color: var(--dark);
 }
 
 .item-price {
@@ -467,12 +496,13 @@ nav ul li a.active {
     color: #444;
 }
 
+/* Meta Tags */
 .item-meta {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .meta-item {
@@ -483,7 +513,7 @@ nav ul li a.active {
     background: #f5f3f0;
     padding: 10px 18px;
     border-radius: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .meta-item i {
@@ -491,6 +521,7 @@ nav ul li a.active {
     font-size: 1.1rem;
 }
 
+/* Back Button */
 .back-to-menu {
     display: inline-flex;
     align-items: center;
