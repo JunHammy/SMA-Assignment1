@@ -137,7 +137,7 @@ nav ul li a.active {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1000px;
     animation: fadeInUp 1s ease;
     position: relative;
     z-index: 1;
@@ -475,7 +475,7 @@ nav ul li a.active {
 /* Text Content */
 .item-info {
     text-align: center;
-    max-width: 700px;
+    max-width: 70%;
     margin: 0 auto;
 }
 
