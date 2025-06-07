@@ -323,8 +323,14 @@ nav ul li a.active {
     z-index: 1;
 }
 
+.menu .section-title h1 {
+    color: white;
+    font-size: 3rem;
+}
+
 .menu .section-title h2 {
     color: white;
+    font-size: 2rem;
 }
 
 .menu-categories {
